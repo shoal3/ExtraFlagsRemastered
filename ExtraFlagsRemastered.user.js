@@ -26,8 +26,8 @@
 // @grant       GM_setValue
 // @grant       GM_addStyle
 // @run-at      document-end
-// @updateURL   https://gitlab.com/flagtism/Extra-Flags-for-4chan/raw/master/Extra%20Flags%20for%20int.user.js
-// @downloadURL https://gitlab.com/flagtism/Extra-Flags-for-4chan/raw/master/Extra%20Flags%20for%20int.user.js
+// @updateURL   https://github.com/shoal3/ExtraFlagsRemastered/raw/master/ExtraFlagsRemastered.user.js
+// @downloadURL https://github.com/shoal3/ExtraFlagsRemastered/raw/master/ExtraFlagsRemastered.user.js
 // ==/UserScript==
 
 // DO NOT EDIT ANYTHING IN THIS SCRIPT DIRECTLY - YOUR REGION SHOULD BE CONFIGURED BY USING THE CONFIGURATION BOXES (see install webms for help)
@@ -56,7 +56,7 @@ var allPostsOnPage = [];
 var postNrs = [];
 var postRemoveCounter = 60;
 var requestRetryInterval = 5000;
-var flegsBaseUrl = 'https://github.com/flaghunters/Extra-Flags-for-4chan/raw/master/flags/';
+var flegsBaseUrl = 'https://github.com/shoal3/ExtraFlagsRemastered/tree/master/flags/';
 // remove comment and change link to add country flag icons into selection menu var countryFlegsBaseUrl = 'https://raw.githubusercontent.com/flagzzzz/Extra-Flags-for-4chan/master/flags/';
 var flagListFile = 'flag_list.txt';
 var backendBaseUrl = 'https://countryball.ca/';
@@ -67,7 +67,7 @@ var regionDivider = "||";
 
 /** Setup, preferences */
 var setup = {
-    namespace: 'com.whatisthisimnotgoodwithcomputers.extraflagsforint.',
+    namespace: 'https://github.com/shoal3/ExtraFlagsRemastered',
     id: "ExtraFlags-setup",
     html: function () {
 
@@ -266,7 +266,7 @@ radio = setup.load(radioVariable);
 if (!regions) {
     regions = [];
     setTimeout(function () {
-        if (window.confirm("Extra Flags: No region detected, set it up now?") === true) {
+        if (window.confirm("Extra Flags: No region detected. Set it up now?") === true) {
             setup.show();
         }
     }, 2000);
